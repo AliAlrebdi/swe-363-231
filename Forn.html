@@ -4,6 +4,7 @@
    
         <title>Hire me</title>
     </head>
+
     <body>
         <form action="">
             
@@ -11,31 +12,54 @@
                 Hire my expertise
             </h1>
 
-            <label for="trackcheck"> Tracker</label>
-            <input type="checkbox" id= "trackcheck">
+            <ul>
+                <li> 
+                    <a href="http://127.0.0.1:5500/index.html">
+                        Home
+                    </a>
+                </li>
+            </ul>
 
-            <div>
+            <label for="projectcheck"> Project</label>
+            <input type="checkbox" id= "projectcheck">
 
-                    <input type="text" list="Products">
+            <label for="hourCheck">By hour</label>
+            <input type="checkbox" id="hourCheck">
 
-            </div>
+            <main>
+                    <label for="type">Type :</label>
+                    <input type="text" list="Services" placeholder="Enter the type of software you want">
 
-            <datalist id = "Products">
-                <option value="Coffee"></option>
-                <option value="Water"></option>
-                <option value="Tea"></option>
-                <option value="Juice"></option>
-            </datalist>
+
+                    <datalist id = "Services">
+                        <option value="website"></option>
+                        <option value="andriod mobile app"></option>
+                        <option value="IOS mobile app"></option>
+                        <option value="special request"></option>
+                    </datalist>
+
+            </main>
+
+            <section>
+
+                <label for="Describtion">Describtion :</label>
+
+                <input type="text" id="Describtion" name="descreption" placeholder="Try to describe every detail of your software"> 
+
+
+            </section>
             
-            <input type="submit" value="Search">
+           
 
-            <button>
-                Feeling lucky
-                
-            </button>
+
             
 
 
+        </form>
+
+        <form action="http://127.0.0.1:5500/confirmation.html">
+
+            <input type="submit" value="Go to confirmation Page">            
         </form>
     </body>
 </html>
