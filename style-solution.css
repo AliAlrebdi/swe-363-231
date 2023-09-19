@@ -1,0 +1,44 @@
+
+h2 {
+    font-family: sans-serif;
+}
+
+head {
+
+    text-transform: uppercase;
+}
+
+header {
+
+    text-transform: uppercase;
+}
+
+h2 + p::first-letter {
+    font-size: x-large;
+}
+  
+table tr:hover {
+
+    background-color: lightblue;
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points from the list */
+  }
+  
+nav li {
+    display: inline; /* Change list items to display inline */
+    margin-right: 10px; /* Add some space between list items */
+}
+
+nav li a{
+
+    text-decoration: none;
+    
+}
+
+nav li:first-child a {
+
+    text-decoration: underline;
+}
+
