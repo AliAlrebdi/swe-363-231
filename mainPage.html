@@ -17,7 +17,13 @@
         
     </head>
     <header>
-        <p>The beggining of my SWE 363 Journey
+        <p>The beggining of my SWE 363 Journey</p>
+
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
             
                 <nav class="navbar">
                     <ul>
@@ -27,7 +33,7 @@
                         <li><a href="http://127.0.0.1:5500/mainPage-ar.html">Arabic</a></li>
                     </ul>
                 </nav>
-        </p>
+        
         
 
         <img src="b32fe114-6924-492a-83cf-321abb58c435.jpeg" 
@@ -35,6 +41,54 @@
         <p><em>This website is a life, financial, and an academic organizer</em></p>
 
 </header>
+
+<style>
+    .hamburger {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: block;
+}
+
+.hamburger:hover + .navbar ul {
+    display: block;
+}
+
+.hamburger:hover + .navbar ul li:nth-child(1) .bar {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+
+.hamburger:hover + .navbar ul li:nth-child(2) .bar {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.hamburger:hover + .navbar ul li:nth-child(3) .bar {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+</style>
     <body>
         
 
