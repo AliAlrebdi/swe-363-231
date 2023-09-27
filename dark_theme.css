@@ -1,53 +1,6 @@
 
 header {
-    
-    display: inline-flex;
-    padding: 30px 112px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-
-   color: white;
-    
-}
-
-header p {
-    margin: 0; /* Remove default margin to prevent spacing */
-}
-
-.navbar {
-    display: flex;
-    padding-bottom: 0px;
-    align-items: flex-start;
-    gap: 10px;
-    position: relative;
-    color: white;
-}
-
-.navbar ul {
-    
-    list-style: none;
-    padding: 0;
-    display: inline; /* Set the <ul> element to inline */
-}
-
-.navbar li {
-    display: flex;
-    padding: 8px;
-    align-items: flex-start;
-    gap: 10px;
-    display: inline;
-    margin-right: 10px; /* Optional: Add some spacing between menu items */
-}
-
-.navbar a {
-    text-decoration: none;
-}
-
-/* Optional: Style for the most important item (About me) */
-.the_most_important {
-    
-    font-weight: bold;
+    text-transform: uppercase;
 }
 
 
