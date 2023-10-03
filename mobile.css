@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Black.ttf');
+    /* You can also specify different formats for cross-browser compatibility */
+  }
+
+body {
+    background-color: #090D1F;
+    color: #FFF;
+    display: flex;
+    padding: 0px 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.navbar {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133.333%; /* 133.333% */
+    width: 95px;
+}
+
+.huge {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 260px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+}
+.heading {
+    align-self: stretch;
+    color: #FFF;
+
+    /* Display xs/Semibold */
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 133.333% */
+}
+
+.posts {
+    display: flex;
+    padding: 0px 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.pic {
+    height: 228px;
+    align-self: stretch;
+
+}
+
+.date {
+    color: #6941C6;
+    align-self: stretch;
+    /* Text sm/Semibold */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+
+    position: relative;
+    top: 24;
+
+}
+
+.first_entry {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+    color: #FFF;
+
+    /* Display xs/Semibold */
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 133.333% */
+}
+
+.first_entry_desc {
+    color: #C0C5D0;
+
+    /* Text md/Normal */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    width: 326px;
+    height: 72px;
+}
+
+.pic2 {
+    width: 320px;
+    height: 200px;
+}
+
+.date2 {
+    color: #6941C6;
+
+    /* Text sm/Semibold */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    position: relative;
+    top: 24;
+
+}
+
+.second_entry {
+    color: #FFF;
+
+    /* Text lg/Semibold */
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 155.556% */
+    position: relative;
+    width: 326px;
+
+    top: 30px;
+
+}
+
+.second_entry_desc {
+    color: #C0C5D0;
+
+    /* Text md/Normal */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+
+    position: relative;
+    top: 50px;
+}
