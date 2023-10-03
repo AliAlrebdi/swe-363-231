@@ -9,14 +9,15 @@ body {
     
     display: flex;
     width: 1440px;
-    padding: 30px 0px;
-    flex-direction: column;
-    justify-content: center;
+    padding: 90px 0px;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
     background: #090D1F;
 
 }
+
+
 
 .top {
 

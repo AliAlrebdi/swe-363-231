@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Black.ttf');
+    /* You can also specify different formats for cross-browser compatibility */
+  }
+
+body {
+    background-color: #090D1F;
+    display: flex;
+    width: 1440px;
+    padding: 30px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: #FFF;
+
+}
+
+.header {
+    display: inline-flex;
+    padding: 30px 112px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.name {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; 
+    width: 106px;
+}
+
+
+.navbar {
+    display: flex;
+    width: 1216px;
+    padding: 10px 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    gap: 10;
+    
+}
+
+.navbar ul li a {
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    width: 44px;
+    height: 24px;
+
+}
+
+.huge {
+    display: flex;
+    width: 1280px;
+    padding: 0px 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    
+}
+
+.huge p{
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 244px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.posts {
+    display: flex;
+    width: 1280px;
+    padding: 0px 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+
+.heading {
+    color: #FFF;
+    font-family: 'Inter';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133.333%; 
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    flex: 1 0 0;
+    align-self: stretch;
+    
+}
+
+.pic {
+    flex: 1 0 0;
+    align-self: stretch;
+    
+}
+
+.lowerPart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.date {
+    color: #6941C6;
+    /* Text sm/Semibold */
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 142.857%; /* 142.857% */
+    padding: 10 0 0 0;
+}
+
+.first_entry {
+    flex: 1 0 0;
+    color: #FFF;
+
+    /* Display xs/Semibold */
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133.333%; /* 133.333% */
+    width: 552px;
+    height: 32px;
+
+}
+
+.first_entry_desc {
+    align-self: stretch;
+    color: #667085;
+
+    /* Text md/Normal */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    width: 592px;
+    height: 48px;
+
+}
+
+.pic2 {
+    position: relative;
+    left: 750px;
+    bottom: 475px;
+    
+}
+.date2 {
+    position: relative;
+    left: 750px;
+    bottom: 435px;
+    color: #6941C6;
+    /* Text sm/Semibold */
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 142.857%; /* 142.857% */
+    padding: 10 0 0 0;
+}
+
+.second_entry {
+    position: relative;
+    left: 750px;
+    bottom: 395px;
+    flex: 1 0 0;
+    color: #FFF;
+
+    /* Display xs/Semibold */
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 133.333%; /* 133.333% */
+    width: 552px;
+    height: 32px;
+}
+
+.second_entry_desc {
+    position: relative;
+    left: 750px;
+    bottom: 385px;
+    align-self: stretch;
+    color: #667085;
+
+    /* Text md/Normal */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    width: 592px;
+    height: 48px;
+}
+
+.intials {
+    position: relative;
+    bottom: 608px;
+    left: 460;
+    color: green;
+}
+
+.intials2 {
+    position: relative;
+    bottom: 708px;
+    left: 1010;
+    color: black;
+}
