@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+        font-family: 'Inter';
+        src: url('Inter-Black.ttf');
+        /* You can also specify different formats for cross-browser compatibility */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #090D1F;
+            color: aliceblue;
+            font-family: "Inter";
+
+        }
+
+        
+
+        .cell {
+            font-family: sans-serif;
+            font-size: larger;
+            font-weight: bolder;
+            background-color: #1a2d70;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cell:hover {
+            background-color: rgb(165, 142, 142);
+        }
+
+        .row {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="turn">
+        Now it's is <span>X</span>'s turn
+    </h1>
+    <!-- Board -->
+    <div class="board">
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <div id="message"></div>
+        <script>
+
+            // decided which turn is it
+            let turn = "X"
+            let gameEnded = false
+            const cells = document.querySelectorAll(".cell");
+
+            // when we click on a cell add the letter 
+            let board = document.getElementsByClassName("board")[0]
+            board.addEventListener("click", cellClicked)
+
+            const messageElement = document.getElementById("message");
+
+
+            // All the winning cases 
+            const winCombos = [
+                [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+                [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
+                [0, 4, 8], [2, 4, 6] // Diagonals
+            ];
+
+            function cellClicked(event) {
+                let cell = event.target
+
+                if(cell.innerText === "X" || cell.innerText === "O") {
+                    return;
+                } 
+                else if(turn === "X") {
+                    
+                    cell.innerText = turn
+                    cell.style.backgroundColor = "red"
+                }
+                else {
+                    cell.innerText = turn
+                }    
+                
+                if(checkWinner(turn)) {
+                    
+                    gameEnded = true
+                } else if(isBoardFull) {
+                    messageElement.textContent = "The game has ended in a draw !"
+                } 
+              
+
+                if (gameEnded) {
+                    // HW 
+                    // Update the message element with your desired message
+                    messageElement.textContent = turn + " have won the game !";
+
+                    return;
+                } else {
+                     // change turn
+                     turn = turn === "X" ? "O" : "X"
+
+                     //change title
+                     turnLetter = document.querySelector("#turn span")
+                     turnLetter.innerText = turn
+                }
+            }
+
+            function checkWinner(play) {
+                return winCombos.some(combo => {
+                    const [a, b, c] = combo;
+                    return (
+                        cells[a].innerText === play && cells[b].innerText === play && cells[c].innerText === play
+                    );
+                })
+            }
+
+            function isBoardFull() {
+                return Array.from(cells).every(cell => cell.innerText.trim() === "X" || cell.innerText.trim() === "O");
+            }
+
+
+
+            
+        </script>
+    </div>
+
+</body>
+
+</html>
