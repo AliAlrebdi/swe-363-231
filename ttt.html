@@ -47,6 +47,11 @@
         .row {
             display: flex;
         }
+
+        :focus {
+            outline: 2px solid #0078d4; /* Example focus style */
+        }
+
     </style>
 </head>
 
@@ -57,21 +62,30 @@
     <!-- Board -->
     <div class="board">
         <div class="row">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+            <div class="cell" tabindex="0"></div>
+            <div class="cell" tabindex="0"></div>
+            <div class="cell" tabindex="0"></div>
         </div>
         <div class="row">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+            <div class="cell" tabindex="0"></div>
+            <div class="cell" tabindex="0"></div>
+            <div class="cell" tabindex="0"></div>
         </div>
         <div class="row">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+            <div class="cell" tabindex="0"></div>
+            <div class="cell" tabindex="0"></div>
+            <div class="cell" tabindex="0"></div>
         </div>
         <div id="message"></div>
+
+        <aside><ul>
+            <li>
+                Use the Arrows to navigate through the board
+            </li>
+            <li>
+                Press Enter to place your move
+            </li>
+        </ul></aside>
         <script>
 
             // decided which turn is it
@@ -145,7 +159,38 @@
                 return Array.from(cells).every(cell => cell.innerText.trim() === "X" || cell.innerText.trim() === "O");
             }
 
+            // Keyboard navigation
+            const grid = document.querySelectorAll('.cell');
+            let currentIndex = 0;
 
+            function handleKeyboardNavigation(event) {
+                if (gameEnded) return; // Don't allow navigation if the game has ended
+
+                // Handle arrow keys for navigation
+                if (event.key === 'ArrowLeft' && currentIndex % 3 !== 0) {
+                    currentIndex--;
+                } else if (event.key === 'ArrowRight' && currentIndex % 3 !== 2) {
+                    currentIndex++;
+                } else if (event.key === 'ArrowUp' && currentIndex >= 3) {
+                    currentIndex -= 3;
+                } else if (event.key === 'ArrowDown' && currentIndex < 6) {
+                    currentIndex += 3;
+                }
+
+                // Handle Enter key to make a selection
+                if (event.key === 'Enter' && !gameEnded) {
+                    grid[currentIndex].click();
+                }
+
+                // Set focus on the currently selected cell
+                grid[currentIndex].focus();
+            }
+
+            // Add keyboard event listener
+            document.addEventListener('keydown', handleKeyboardNavigation);
+
+            // Set focus on the first cell
+            grid[0].focus();
 
             
         </script>
