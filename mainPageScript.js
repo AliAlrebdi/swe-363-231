@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
       .catch((error) => console.log(error));
   });
   
+  // I have already done most of exercise 2 and it is implemented in many of my functions in here
   const canvas = document.getElementById('screensaver');
   const content = document.getElementById('content');
   
@@ -68,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.addEventListener('keydown', hideScreensaver);
   
 
-  class blogPost {
+class blogPost {
 
     image;
     date;
