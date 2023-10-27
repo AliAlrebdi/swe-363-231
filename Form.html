@@ -4,9 +4,39 @@
    
         <title>Hire me</title>
     </head>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('Inter-Black.ttf');
+            /* You can also specify different formats for cross-browser compatibility */
+        }
 
+        body {
+            background-color: #090D1F;
+            display: flex;
+            width: 1440px;
+            padding: 30px 0px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            color: #FFF;
+
+        }
+
+        #signatureCanvas {
+            border: 1px solid #000;
+            background-color: #fff;
+        }
+
+        #clearButton {
+            margin-top: 10px;
+        }
+
+
+    </style>
     <body>
-        <form action="">
+        <form action="" >
             
             <h1>
                 Hire my expertise
@@ -14,7 +44,7 @@
 
             <ul>
                 <li> 
-                    <a href="http://127.0.0.1:5500/mainPage.html">
+                    <a href="http://127.0.0.1:5500/mainPage2ndV.html">
                         Home
                     </a>
                 </li>
@@ -27,7 +57,7 @@
             <input type="checkbox" id="hourCheck">
 
             <main>
-                    <label for="type">Type :</label>
+                    <label for="type" id="typeLabel">Type :</label>
                     <input type="text" list="Services" placeholder="Enter the type of software you want">
 
 
@@ -40,6 +70,8 @@
 
             </main>
 
+            
+
             <section>
 
                 <label for="Describtion">Describtion :</label>
@@ -51,7 +83,7 @@
             
            
 
-
+            
             
 
 
@@ -61,5 +93,68 @@
 
             <input type="submit" value="Go to confirmation Page">            
         </form>
+
+        <aside>
+            <p>Insert your signature:</p>
+            <canvas id="signatureCanvas" width="400" height="200"></canvas>
+
+            <button id="clearButton">Clear</button>
+            <input type="submit" value="Submit" id="submitBtn">
+              
+        </aside>
+
+        <script>
+            const canvas = document.getElementById('signatureCanvas');
+            const ctx = canvas.getContext('2d');
+
+            let isDrawing = false;
+            let lastX = 0;
+            let lastY = 0;
+
+            function startDrawing(e) {
+                isDrawing = true;
+                [lastX, lastY] = [e.offsetX, e.offsetY];
+            }
+
+            function draw(e) {
+                if (!isDrawing) return; 
+                ctx.strokeStyle = '#000'; 
+                ctx.lineWidth = 2; 
+                ctx.lineJoin = 'round';
+                ctx.lineCap = 'round';
+
+                ctx.beginPath();
+                ctx.moveTo(lastX, lastY);
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.stroke();
+
+                [lastX, lastY] = [e.offsetX, e.offsetY];
+            }
+
+            function stopDrawing() {
+                isDrawing = false;
+            }
+
+            canvas.addEventListener('mousedown', startDrawing);
+            canvas.addEventListener('mousemove', draw);
+            canvas.addEventListener('mouseup', stopDrawing);
+            canvas.addEventListener('mouseout', stopDrawing);
+
+            const clearButton = document.getElementById('clearButton');
+            clearButton.addEventListener('click', () => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            });
+
+            const submitButton = document.getElementById('submitBtn');
+            submitButton.addEventListener('click', () => {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            })
+
+            const form = document.querySelector('form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+            });
+
+        </script>
     </body>
 </html>
