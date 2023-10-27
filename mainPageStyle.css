@@ -122,7 +122,7 @@ body {
     
 }
 
-.lowerPart {
+#lowerPart {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -130,7 +130,7 @@ body {
     align-self: stretch;
 }
 
-.date {
+#date {
     color: #6941C6;
     /* Text sm/Semibold */
     font-family: 'Inter';
@@ -141,7 +141,7 @@ body {
     padding: 10 0 0 0;
 }
 
-.first_entry {
+#first_entry {
     flex: 1 0 0;
     color: #FFF;
 
@@ -156,7 +156,7 @@ body {
 
 }
 
-.first_entry_desc {
+#first_entry_desc {
     align-self: stretch;
     color: #667085;
 
@@ -171,13 +171,21 @@ body {
 
 }
 
-.pic2 {
+#pic2 {
     position: relative;
     left: 750px;
-    bottom: 475px;
+    bottom: 900px;
     
 }
-.date2 {
+
+#lowerPart2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+}
+#date2 {
     position: relative;
     left: 750px;
     bottom: 435px;
@@ -191,7 +199,7 @@ body {
     padding: 10 0 0 0;
 }
 
-.second_entry {
+#second_entry {
     position: relative;
     left: 750px;
     bottom: 395px;
@@ -208,7 +216,7 @@ body {
     height: 32px;
 }
 
-.second_entry_desc {
+#second_entry_desc {
     position: relative;
     left: 750px;
     bottom: 385px;
@@ -225,14 +233,14 @@ body {
     height: 48px;
 }
 
-.intials {
+#intials {
     position: relative;
     bottom: 608px;
     left: 460;
     color: green;
 }
 
-.intials2 {
+#intials2 {
     position: relative;
     bottom: 708px;
     left: 1010;

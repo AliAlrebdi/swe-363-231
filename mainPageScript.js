@@ -67,3 +67,93 @@ document.addEventListener("DOMContentLoaded", function() {
   document.addEventListener('mousemove', hideScreensaver);
   document.addEventListener('keydown', hideScreensaver);
   
+
+  class blogPost {
+
+    image;
+    date;
+    title;
+    description;
+
+    constructor(image, date, title, description) {
+        this.image = image;
+        this.date = date;
+        this.title = title;
+        this.description = description;
+    }
+
+    createHtml() {
+        const post = document.createElement("aside");
+
+        post.innerHTML = `
+            <!-- The picture of the post -->
+            <div id="pic">
+                <img src="${this.image}" 
+        alt="A picture of me" width = 500 height= "250">
+            </div>
+            
+            
+            <!-- The date and description of the post -->
+            <div id="lowerPart">
+                <div id="date">
+                    <p>${this.date}</p>
+            </div>
+
+            <div id="first_entry">
+                <p>${this.title}</p>
+            </div>
+            <div id="first_entry_desc">
+                <p>${this.description}
+                </p>
+            </div>
+        </div>
+        `;
+        return post;
+    }
+
+    createHtml2() {
+        const post = document.createElement("section");
+
+        post.innerHTML = `
+        <!-- The picture of the post -->
+        <div id = 'pic2'>
+            <img src="${this.image}" width="300">
+        </div>
+        
+        <!-- The date and description of the post -->
+        <div id="date2">
+            <p>${this.date}</p>
+        </div>
+
+        <div id="second_entry">
+            <p>${this.title}</p>
+        </div>
+
+        <div id="second_entry_desc">
+        <p>${this.description}</p>
+        </div>
+        `;
+    }
+
+    
+  }
+
+const firstPost = new blogPost(
+    "b32fe114-6924-492a-83cf-321abb58c435.jpeg", 
+    "Tuesday, 3 Oct 2023", 
+    "First Post on my Blog!", 
+    "The start of the course was quite exciting but after digging deeper in the course things statred to get challenging"
+    );
+
+const secondPost = new blogPost(
+    "project-management-software-in-mother-tongue.png",
+    "Monday, 2 Oct 2023",
+    "Trial Positioning",
+    "This is the solution for exercise 1 in CSS4"
+);
+
+const container = document.getElementById('bigContainer');
+const container2 = document.getElementById('bigContainer');
+
+container.appendChild(firstPost.createHtml())
+container2.appendChild(secondPost.createHtml())
