@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function() {
     fetch("https://api.thecatapi.com/v1/images/search?limit=1")
       .then((res) => res.json())
@@ -158,3 +160,4 @@ const container2 = document.getElementById('bigContainer');
 
 container.appendChild(firstPost.createHtml())
 container2.appendChild(secondPost.createHtml())
+
